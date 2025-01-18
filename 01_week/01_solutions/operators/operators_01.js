@@ -12,4 +12,20 @@
 6. Try the same operations with one positive and one negative number.
 */
 
+//1.
+const a = 8;
+const b = 3;
 
+//2.
+const sum = a + b;
+const difference = a - b;
+const product = a * b;
+const quotient = a / b;
+const remainder = a % b;
+
+//3.
+console.log("sum: ", sum);
+console.log("difference: ", difference);
+console.log("product: ", product);
+console.log("quotient: ", quotient);
+console.log("remainder: ", remainder);
