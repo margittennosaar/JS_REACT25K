@@ -6,13 +6,12 @@
 5. Print the results using console.log() with messages like: "The rounded value is 6." 
 */
 
-function roundNumbers(num) {
-  const rounded = Math.round(num);
-  const floored = Math.floor(num);
-  const ceiled = Math.ceil(num);
-  console.log(`The rounded value is ${rounded}.`);
-  console.log(`The floored value is ${floored}.`);
-  console.log(`The ceiled value is ${ceiled}.`);
-}
+const num = 5.67;
 
-roundNumbers(5.67);
+const roundedNumber = Math.round(num);
+const roundedNumberDown = Math.floor(num);
+const roundedNumberUp = Math.ceil(num);
+
+console.log(`The rounded value is ${roundedNumber}`);
+console.log(`The floored value is ${roundedNumberDown}`);
+console.log(`The ceiled value is ${roundedNumberUp}`);

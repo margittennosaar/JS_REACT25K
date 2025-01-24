@@ -10,13 +10,12 @@ Example output:
 "Does it include 'fun'? true"
  */
 
-const description = " JavaScript is Fun and powerful! ";
-const trimmedDescription = description.trim();
-const lowercasedDescription = trimmedDescription.toLowerCase();
-const includesFun = lowercasedDescription.includes("fun");
-const replacedDescription = lowercasedDescription.replace(
-  "powerful",
-  "amazing"
-);
-console.log(`Final description: ${replacedDescription}`);
+let description = " JavaScript is Fun and powerful! ";
+
+let trimmedDescription = description.trim();
+let lowerDescription = trimmedDescription.toLowerCase();
+let includesFun = lowerDescription.includes("fun");
+let finalDescription = lowerDescription.replace("powerful", "amazing");
+
+console.log("Final description: " + finalDescription);
 console.log(`Does it include 'fun'? ${includesFun}`);

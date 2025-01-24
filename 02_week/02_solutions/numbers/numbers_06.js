@@ -4,10 +4,8 @@
 3. Print the random number using console.log() with a message like: "Your random number is 4." 
 */
 
-function generateRandomNumber() {
-  const random = Math.random() * 10;
-  const floored = Math.floor(random);
-  console.log(`Your random number is ${floored}.`);
-}
+let randomNum = Math.random() * 10;
 
-generateRandomNumber();
+let roundedRandomNumber = Math.floor(randomNum);
+
+console.log(`Your random number is ${roundedRandomNumber}`);

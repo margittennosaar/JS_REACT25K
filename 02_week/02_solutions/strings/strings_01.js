@@ -4,10 +4,10 @@
 `Template literal string`
 Print all three strings using console.log(). */
 
-const str1 = "Single quoted string";
-const str2 = "Double quoted string";
-const str3 = `Template literal string`;
+let singleQuote = "Single quoted string";
+let doubleQuote = "Double quoted string";
+let backtickQuote = `Template literal string`;
 
-console.log(str1);
-console.log(str2);
-console.log(str3);
+console.log(singleQuote);
+console.log(doubleQuote);
+console.log(backtickQuote);

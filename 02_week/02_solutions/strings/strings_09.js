@@ -7,8 +7,12 @@ Example output:
 "First character: J"
 "Last character: t" */
 
-const word = "JavaScript";
-const firstCharacter = word[0];
-const lastCharacter = word[word.length - 1];
-console.log(`First character: ${firstCharacter}`);
-console.log(`Last character: ${lastCharacter}`);
+let word = "JavaScript";
+
+let firstCharBracket = word[0];
+let lastCharBracket = word[word.length - 1];
+
+console.log("First character: " + firstCharBracket);
+console.log(`Last character: ${lastCharBracket}`);
+
+// exptra points if you noticed that this task was already earlier :)

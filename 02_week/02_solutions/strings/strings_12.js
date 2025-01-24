@@ -5,6 +5,8 @@ Example output:
 "I like bananas."
  */
 
-const text = "I like apples.";
-const updatedText = text.replace("apples", "bananas");
-console.log(updatedText);
+let textReplace = "I like apples.";
+
+let updatedText1 = textReplace.replace("apples", "bananas");
+
+console.log(updatedText1);

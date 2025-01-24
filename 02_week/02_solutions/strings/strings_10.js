@@ -5,6 +5,8 @@ Example output:
 "Cleaned string: Clean me up!"
  */
 
-const messyString = " Clean me up! ";
-const cleanedString = messyString.trim();
-console.log(`Cleaned string: ${cleanedString}`);
+let messyString = "   Clean me up!   ";
+
+let cleanedString = messyString.trim();
+
+console.log("Cleaned string: " + cleanedString);

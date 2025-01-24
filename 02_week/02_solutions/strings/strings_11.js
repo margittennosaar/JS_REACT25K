@@ -5,6 +5,8 @@ Example output:
 "Does the phrase include 'powerful'? true"
  */
 
-const phrase = "JavaScript is versatile and powerful.";
-const includesPowerful = phrase.includes("powerful");
-console.log(`Does the phrase include 'powerful'? ${includesPowerful}`);
+let phrase = "JavaScript is versatile and powerful.";
+
+let containsWord = phrase.includes("powerful");
+
+console.log("Does the phrase include 'powerful'? " + containsWord);

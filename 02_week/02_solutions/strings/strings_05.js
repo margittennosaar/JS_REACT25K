@@ -6,8 +6,10 @@ Print messages like:
 "The first character is J."
 "The last character is t." */
 
-const word = "JavaScript";
-const firstCharacter = word[0];
-const lastCharacter = word[word.length - 1];
-console.log(`The first character is ${firstCharacter}.`);
-console.log(`The last character is ${lastCharacter}.`);
+let word = "JavaScript";
+
+let firstChar = word[0];
+let lastChar = word[word.length - 1];
+
+console.log("The first character is " + firstChar);
+console.log("The last character is " + lastChar);

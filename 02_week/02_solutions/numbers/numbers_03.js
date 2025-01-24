@@ -12,9 +12,13 @@ NaN (if the addition involves invalid input).
 
 */
 
-function sumNumbers(num1, num2) {
-  const sum = parseFloat(num1) + parseFloat(num2);
-  console.log(sum);
-}
+let num1 = "10";
+let num2 = "notANumber";
 
-sumNumbers("10", "notANumber");
+let parsedNum1 = parseFloat(num1);
+let parsedNum2 = parseFloat(num2);
+
+let sum = parsedNum1 + parsedNum2;
+console.log(sum);
+console.log(parsedNum1);
+console.log(parsedNum2);

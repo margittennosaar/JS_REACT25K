@@ -3,15 +3,14 @@ Use .toFixed() to:
 Round the price to 2 decimal places.
 Round the price to no decimal places.
 Print both results using console.log() with messages:
-"Price with 2 decimals: 19.57"
-"Price with no decimals: 20"
+    "Price with 2 decimals: 19.57"
+    "Price with no decimals: 20"
  */
 
-function roundPrice(price) {
-  const rounded2 = price.toFixed(2);
-  const rounded0 = Math.round(price);
-  console.log(`Price with 2 decimals: ${rounded2}`);
-  console.log(`Price with no decimals: ${rounded0}`);
-}
+let price = 19.56789;
 
-roundPrice(19.56789);
+let priceTwoDecimals = price.toFixed(2);
+let priceNoDecimals = price.toFixed(0);
+
+console.log("Price with 2 decimals: " + priceTwoDecimals);
+console.log(`Price with no decimals: ${priceNoDecimals}`);

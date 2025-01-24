@@ -4,6 +4,10 @@ Create a string using backticks to say: "I am learning JavaScript." by embedding
 Print the resulting string using console.log(). 
 */
 
-const language = "JavaScript";
-const sentence = `I am learning ${language}.`;
-console.log(sentence);
+let language = "JavaScript";
+
+let message1 = `I am learning ${language}.`;
+let message2 = "I am learning " + language + ".";
+
+console.log(message1);
+console.log(message2);

@@ -4,6 +4,8 @@ Print the sliced portion using console.log().
 Example output:
 "Sliced text: quick brown fox" */
 
-const longText = "The quick brown fox jumps over the lazy dog.";
-const slicedText = longText.slice(4, 19);
-console.log(`Sliced text: ${slicedText}`);
+let longText = "The quick brown fox jumps over the lazy dog.";
+
+let slicedText1 = longText.slice(4, 19);
+
+console.log("Sliced text (hard-coded): " + slicedText1);

@@ -8,11 +8,12 @@
 
 */
 
-function findLargestAndSmallest(a, b, c) {
-  const largest = Math.max(a, b, c);
-  const smallest = Math.min(a, b, c);
-  console.log(`The largest number is ${largest}.`);
-  console.log(`The smallest number is ${smallest}.`);
-}
+let a = 12,
+  b = 7,
+  c = 20;
 
-findLargestAndSmallest(12, 7, 20);
+let max = Math.max(a, b, c);
+let min = Math.min(a, b, c);
+
+console.log(`The largest number is ${max}`);
+console.log(`The smallest number is ${min}`);

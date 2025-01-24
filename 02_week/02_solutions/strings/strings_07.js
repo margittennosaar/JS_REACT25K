@@ -7,8 +7,10 @@ Example output:
 "HELLO, WORLD!"
 "hello, world!" */
 
-const greeting = "Hello, World!";
-const uppercaseGreeting = greeting.toUpperCase();
-const lowercaseGreeting = greeting.toLowerCase();
-console.log(uppercaseGreeting);
-console.log(lowercaseGreeting);
+let greeting = "Hello, World!";
+
+let upperCase = greeting.toUpperCase();
+let lowerCase = greeting.toLowerCase();
+
+console.log(upperCase);
+console.log(lowerCase);
