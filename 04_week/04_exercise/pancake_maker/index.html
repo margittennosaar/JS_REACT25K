@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pancake Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="pancake.jpeg" alt="Delicious pancakes" />
+        <div class="price-banner"><span id="totalPrice">5€</span></div>
+      </div>
+
+      <div class="form-container">
+        <h2>Customize Your Pancake</h2>
+
+        <label for="type">Choose your pancake type:</label>
+        <select id="type">
+          <option value="5">Classic - 5€</option>
+          <option value="6">Chocolate - 6€</option>
+          <option value="7">Blueberry - 7€</option>
+        </select>
+
+        <h3>Select your toppings (1€ each):</h3>
+        <label><input type="checkbox" class="topping" value="1" /> Nuts</label>
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Bananas</label
+        >
+        <label><input type="checkbox" class="topping" value="1" /> Syrup</label>
+
+        <h3>Add extras:</h3>
+        <label
+          ><input type="checkbox" class="extra" value="2" /> Whipped Cream -
+          2€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="3" /> Ice Cream -
+          3€</label
+        >
+
+        <h3>Total Price: <span id="totalPriceDisplay">5€</span></h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
