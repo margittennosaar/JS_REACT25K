@@ -1,0 +1,63 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d5d5d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 375px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.transaction {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 200px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: inherit;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.message {
+  font-weight: bold;
+  margin-top: 10px;
+}
