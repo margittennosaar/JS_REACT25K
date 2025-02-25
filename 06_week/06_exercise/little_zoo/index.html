@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Zoo</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -14,34 +13,37 @@
       <!-- Search & Filter Section -->
       <div class="controls">
         <input type="text" id="searchAnimal" placeholder="Search by name..." />
-        <select id="filterType">
+        <!--         <select id="filterType">
           <option value="All">All Types</option>
           <option value="Mammal">Mammal</option>
           <option value="Bird">Bird</option>
           <option value="Reptile">Reptile</option>
           <option value="Amphibian">Amphibian</option>
           <option value="Fish">Fish</option>
-        </select>
+        </select> -->
         <button id="sortAnimals">Sort A-Z</button>
       </div>
 
       <!-- Animal List Display -->
-      <ul id="animalList"></ul>
+      <ul id="animalList">
+        List will be here
+      </ul>
 
       <!-- Add New Animal Form -->
       <div class="add-animal">
         <h2>Add New Animal</h2>
         <input type="text" id="newAnimalName" placeholder="Animal Name" />
-        <select id="newAnimalType">
+        <!--        <select id="newAnimalType">
           <option value="" disabled selected>Select Type</option>
           <option value="Mammal">Mammal</option>
           <option value="Bird">Bird</option>
           <option value="Reptile">Reptile</option>
           <option value="Amphibian">Amphibian</option>
           <option value="Fish">Fish</option>
-        </select>
+        </select> -->
         <button id="addAnimal">Add Animal</button>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
