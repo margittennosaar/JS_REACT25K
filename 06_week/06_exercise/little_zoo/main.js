@@ -54,7 +54,7 @@ const filterByTypeAnimal = () => {
 };
 
 const sortAnimal = () => {
-    animals.sort();
+    animals.sort((a, b) => a.name.localeCompare(b.name));
     displayAnimals(animals);
 };
 
