@@ -12,9 +12,9 @@ The easiest way to create an object is using **object literals**.
 
 ```js
 const animal = {
-  name: 'Fox',
-  species: 'Canine',
-  age: 4
+  name: "Fox",
+  species: "Canine",
+  age: 4,
 };
 ```
 
@@ -27,6 +27,13 @@ function Animal(name, species, age) {
   this.name = name;
   this.species = species;
   this.age = age;
+
+  // methods
+  getName() {
+    return  this.name;
+  }
+
+
 }
 
 const animal1 = new Animal('Wolf', 'Canine', 5);
@@ -43,7 +50,16 @@ class Animal {
     this.species = species;
     this.age = age;
   }
+
+  // methods
+  getName() {
+    return  this.name;
+  }
+
+  setName(name)
 }
+
+console.log(animal.getName())
 
 const animal2 = new Animal('Deer', 'Herbivore', 2);
 ```
@@ -52,8 +68,9 @@ const animal2 = new Animal('Deer', 'Herbivore', 2);
 
 ## Accessing and modifying properties
 
-You can **access properties** in two ways:  
-- **Dot notation** → The most common and easiest to read.  
+You can **access properties** in two ways:
+
+- **Dot notation** → The most common and easiest to read.
 - **Bracket notation** → Needed when property names have special characters or are stored in variables.
 
 ### Dot notation
@@ -66,11 +83,11 @@ animal.age = 5; // Updates the age
 ### Bracket notation
 
 ```js
-const property = 'species';
+const property = "species";
 console.log(animal[property]); // Outputs: Canine
 
-animal['age'] = 6;
-console.log(animal['age']); // Outputs: 6
+animal["age"] = 6;
+console.log(animal["age"]); // Outputs: 6
 ```
 
 ---
@@ -82,7 +99,7 @@ Objects are **dynamic**, meaning you can add or remove properties anytime.
 ### Adding properties
 
 ```js
-animal.habitat = 'Forest';
+animal.habitat = "Forest";
 console.log(animal.habitat); // Outputs: Forest
 ```
 
@@ -103,10 +120,10 @@ An **object method** is a function stored inside an object.
 
 ```js
 const animal = {
-  name: 'Fox',
+  name: "Fox",
   speak: function () {
     console.log(`I am a ${this.name}!`);
-  }
+  },
 };
 
 animal.speak(); // Outputs: I am a Fox!
@@ -116,10 +133,10 @@ animal.speak(); // Outputs: I am a Fox!
 
 ```js
 const animal = {
-  name: 'Fox',
+  name: "Fox",
   speak() {
     console.log(`I am a ${this.name}!`);
-  }
+  },
 };
 
 animal.speak(); // Outputs: I am a Fox!
@@ -133,9 +150,9 @@ Objects can be stored inside arrays, making it easier to manage **multiple items
 
 ```js
 const zoo = [
-  { name: 'Fox', species: 'Canine' },
-  { name: 'Eagle', species: 'Bird' },
-  { name: 'Bear', species: 'Mammal' }
+  { name: "Fox", species: "Canine" },
+  { name: "Eagle", species: "Bird" },
+  { name: "Bear", species: "Mammal" },
 ];
 
 console.log(zoo[1].name); // Outputs: Eagle
@@ -149,10 +166,10 @@ The **`this`** keyword refers to the object that calls the function.
 
 ```js
 const animal = {
-  name: 'Fox',
+  name: "Fox",
   speak() {
     console.log(this); // Refers to the animal object
-  }
+  },
 };
 
 animal.speak();
@@ -162,9 +179,73 @@ animal.speak();
 
 ## Summary
 
-- **Dot notation** is the easiest way to access and modify properties.  
-- **Bracket notation** is useful when property names are stored as variables.  
-- **Methods** are functions stored inside objects, using **`this`** to access object properties.  
-- **Objects can be inside arrays**, allowing structured data.  
+- **Dot notation** is the easiest way to access and modify properties.
+- **Bracket notation** is useful when property names are stored as variables.
+- **Methods** are functions stored inside objects, using **`this`** to access object properties.
+- **Objects can be inside arrays**, allowing structured data.
 
 ---
+
+## Extra Class Information and Structure
+
+### Class Structure
+
+```js
+class Animal {
+  // 1. Public Fields (Instance Properties)
+  name;
+  species;
+
+  // 2. Private Fields (Encapsulation)
+  #secretCode;
+
+  // 3. Static Properties (Belong to the class, not instances)
+  static kingdom = "Animalia";
+
+  // 4. Constructor (Used to initialize the instance)
+  constructor(name, species, age) {
+    this.name = name; // Public field
+    this.species = species;
+    this.age = age; // Instance property
+    this.#secretCode = 12345; // Private field
+  }
+
+  // 5. Public Methods (Accessible to all instances)
+  getName() {
+    return this.name;
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+
+  // 6. Private Methods (Only accessible inside the class)
+  #generateSecret() {
+    return `Secret-${this.#secretCode}`;
+  }
+
+  // 7. Static Methods (Belong to the class, not instances)
+  static getKingdom() {
+    return Animal.kingdom;
+  }
+
+  // 8. Getters (Access computed properties)
+  get ageInDogYears() {
+    return this.age * 7;
+  }
+
+  // 9. Setters (Modify properties with additional logic)
+  set age(newAge) {
+    if (newAge < 0) {
+      console.error("Age cannot be negative!");
+    } else {
+      this._age = newAge;
+    }
+  }
+
+  // 10. Class Fields with Arrow Functions (Keeps "this" bound correctly)
+  arrowFunctionExample = () => {
+    console.log(this.name);
+  };
+}
+```
