@@ -39,4 +39,24 @@ pancakeForm.addEventListener("change", changeHandler);
 
 seeOrderButton.addEventListener("click", () => {
   // put in your code here
+  const deliveryChecked = document.querySelector('[name="delivery"]:checked');
+  const deliveryFee = deliveryChecked ? deliveryChecked.dataset.price : "0";
+
+  // Get selected toppings
+  const selectedToppings = [...document.querySelectorAll(".topping:checked")]
+    .map((topping) => topping.value)
+    .join(", ");
+
+  // Get selected extras
+  const selectedExtras = [...document.querySelectorAll(".extra:checked")]
+    .map((extra) => extra.value)
+    .join(", ");
+
+  // Handle case where no toppings or extras are selected
+  const toppingsText = selectedToppings
+    ? `with ${selectedToppings}`
+    : "with no toppings";
+  const extrasText = selectedExtras ? `and ${selectedExtras}` : "and no extras";
+
+  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppingsText} ${extrasText}. Delivery fee: ${deliveryFee}€`;
 });
