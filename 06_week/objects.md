@@ -50,18 +50,11 @@ class Animal {
     this.species = species;
     this.age = age;
   }
-
-  // methods
-  getName() {
-    return  this.name;
-  }
-
-  setName(name)
 }
 
-console.log(animal.getName())
+console.log(animal.getName());
 
-const animal2 = new Animal('Deer', 'Herbivore', 2);
+const animal2 = new Animal("Deer", "Herbivore", 2);
 ```
 
 ---

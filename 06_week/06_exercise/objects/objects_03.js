@@ -5,6 +5,17 @@ Instantiate a new user and call `showInfo()`.
 */
 
 // Your code here
+function User(username, email) {
+  this.username = username;
+  this.email = email;
+
+  this.showInfo = function () {
+    console.log(`Username: ${this.username}, Email: ${this.email}`);
+  };
+}
+
+const user1 = new User("John", "john@example.com");
+user.showInfo();
 
 /* Task 2
 Modify Task 1: Use an ES6 `class` instead of a constructor function to define `User`.
@@ -13,12 +24,42 @@ Add a method `changeEmail(newEmail)` that updates the user's email.
 
 // Your code here
 
+class User {
+  constructor(username, email) {
+    this.username = username;
+    this.email = email;
+  }
+
+  changeEmail(newEmail) {
+    this.email = newEmail;
+  }
+
+  showInfo() {
+    console.log(`Username: ${this.username}, Email: ${this.email}`);
+  }
+}
+
+const user2 = new User("John", "john@example.com");
+user.showInfo();
+user.changeEmail("john@gmail.com");
+user.showInfo();
+
 /* Task 3
 Create an object `theme` with properties `name` (light or dark) and `isActive`.
 Add a button in HTML. When clicked, toggle the theme between light and dark, updating the `isActive` property.
 */
 
 // Your code here
+
+class Theme {
+  constructor(name, isActive) {
+    this.name = name;
+    this.isActive = isActive;
+  }
+}
+
+const theme = new Theme("light", true);
+theme.toggleTheme();
 
 /* Task 4
 Create an object `counter` with a `value` property.
@@ -27,6 +68,20 @@ Display `value` in an HTML element and update it dynamically when buttons are cl
 */
 
 // Your code here
+
+class Counter {
+  constructor(value) {
+    this.value = value;
+  }
+
+  increase() {
+    this.value++;
+  }
+}
+
+const counter = new Counter(0);
+counter.increase();
+console.log(counter.value);
 
 /* Task 5
 Create an object `product` with `name`, `price`, and `quantity`.
