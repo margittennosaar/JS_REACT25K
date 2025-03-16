@@ -8,8 +8,15 @@ Example:
 task1(); // Logs: "Strict mode error: variable is not defined"
 */
 
+"use strict";
+
 function task1() {
-    // Code here
+  // Code here
+  try {
+    x = 10;
+  } catch (error) {
+    console.log("Strict mode error: " + error.message);
+  }
 }
 
 /* Task 2: Declare Variables Correctly
@@ -23,7 +30,12 @@ Expected:
 */
 
 function task2() {
-    // Code here
+  // Code here
+  try {
+    MAX_USERS = 100;
+  } catch (error) {
+    console.log("Strict mode error: " + error.message);
+  }
 }
 
 /* Task 3: Create and Log an Object
@@ -39,7 +51,13 @@ Expected:
 */
 
 function task3() {
-    // Code here
+  // Code here
+  const userProfile = {
+    name: "Alice",
+    email: "alice@example.com",
+    isAdmin: true,
+  };
+  console.log(userProfile);
 }
 
 /* Task 4: Write a Simple Function
@@ -52,7 +70,8 @@ calculateArea(5, 10) → 50
 */
 
 function calculateArea(width, height) {
-    // Code here
+  // Code here
+  return width * height;
 }
 
 /* Task 5: Avoid Magic Numbers
@@ -66,7 +85,8 @@ applyDiscount(100) → 90
 
 const DISCOUNT = 0.1;
 function applyDiscount(price) {
-    // Code here
+  // Code here
+  return price * (1 - DISCOUNT);
 }
 
 /* Task 6: Write Useful Comments
@@ -79,7 +99,8 @@ greetUser("Bob") → "Hello, Bob!"
 */
 
 function greetUser(name) {
-    // Code here
+  // Code here
+  return "Hello, " + name + "!";
 }
 
 /* Task 7: Refactor Unclear Code
@@ -94,7 +115,12 @@ After:
 */
 
 function checkNumber(n) {
-    // Code here
+  // Code here
+  if (n < 0) {
+    return "negative";
+  } else {
+    return "positive";
+  }
 }
 
 /* Task 8: Fix Formatting
@@ -109,6 +135,6 @@ After:
 */
 
 function example() {
-    let x = 10;
-    console.log(x);
+  let x = 10;
+  console.log(x);
 }
